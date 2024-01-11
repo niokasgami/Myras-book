@@ -1,0 +1,6 @@
+﻿Important task : 
+ * implement the variable system. similar to the inventory, I should make sure that my variable system is solid 
+    and easy to use for scalability. 
+    
+    note to self : I could do one class that handle and store those data into an easy to use dictionnary. 
+    I gotta figure out how to load it as an adressable first.
