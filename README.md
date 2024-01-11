@@ -49,7 +49,7 @@ With that it allowed to quickly be able to add new features without affecting th
 The json system was also abandonned in favor of an easy to extends ScriptableObject structure which allowed to quickly  iterate new Story nodes (i.e an choice node).
 The addition of addressables to the pipeline also helped quickly in term of assets Management.
 
-Although in this current iterations UI / gameplay features were halted in favor to create a strong fondation and the main focus is currently on the editor.
+Although in this current iterations UI / gameplay features were halted in favor to create a strong fundation and the main focus is currently on the editor.
 ![Alt text](./screenshots/editor_sample.gif)
 
 After the editor will be finished and stable, the main goal will be 
