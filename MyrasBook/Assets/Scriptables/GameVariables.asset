@@ -16,9 +16,9 @@ MonoBehaviour:
   - name: MyAmazingVariable!
     type: 2
     value: 10
-  - name: 
-    type: 0
-    value: 
+  - name: MY NEW VARIABLE!
+    type: 3
+    value: a string
   global:
   - name: 
     type: 0

@@ -40,9 +40,9 @@ namespace Hollow.Editor
           
           [TableColumnWidth(50, false)]
           [ShowInInspector, PreviewField(45, ObjectFieldAlignment.Center)]
-          public Image Sprite
+          public Sprite Sprite
           {
-            get { return this.item.image; }
+            get => this.item.image;
             set
             {
               this.item.image = value;

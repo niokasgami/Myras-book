@@ -14,10 +14,10 @@ namespace Hollow.ScriptableObjects.Nodes
     
     [BoxGroup("choice data"), LabelWidth(70), PropertySpace(6)]
     public string nextNode;
-    
+
     [BoxGroup("choice data"), LabelWidth(70), PropertySpace(6), LabelText("Actions")]
     [SerializeReference]
-    public ActionBase[] actions;
+    public ActionBase[] actions = new ActionBase[] { };
 
     public NodeAction()
     {

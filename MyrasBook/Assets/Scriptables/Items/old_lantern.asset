@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a24754d7d08495496c83cfe7a2cf982, type: 3}
+  m_Name: old_lantern
+  m_EditorClassIdentifier: 
+  image: {fileID: 21300000, guid: eaa7cb2e12629e243831522d7166634a, type: 3}
+  key: old_lantern
+  displayName: Old Lantern
+  description: The idea of an old Lantern. Its warm flame clear your path and give
+    you a senses of calmness.

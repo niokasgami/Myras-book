@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Hollow.Management;
 using Hollow.ScriptableObjects;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace Hollow.Objects
 {
@@ -14,9 +11,8 @@ namespace Hollow.Objects
   /// </summary>
   public class Inventory
   {
-
-    public delegate void InventoryChangedDelegate();
-    public event InventoryChangedDelegate OnInventoryChanged;
+    
+    public event Action OnInventoryChanged;
     
     private readonly ItemBase[] slots;
     public readonly int maxSlot = 8;
@@ -50,8 +46,7 @@ namespace Hollow.Objects
         Debug.LogError("the slot isn't available!");
       }
     }
-
-
+    
     /// <summary>
     /// Remove an item from the collection using the specified key.
     /// </summary>
@@ -134,6 +129,26 @@ namespace Hollow.Objects
         }
       }
     }
+
+    /// <summary>
+    /// retrieves the item descriptions at the given positions
+    /// </summary>
+    /// <param name="slot"></param>
+    /// <returns></returns>
+    public string Description(int slot)
+    {
+      return slots[slot] is null ? "" : slots[slot].description;
+    }
+
+    public string DisplayName(int slot)
+    {
+      return slots[slot] is null ? "" : slots[slot].displayName;
+    }
+
+    public Sprite Sprite(int slot)
+    {
+      return slots[slot] is null ? null : slots[slot].image;
+    }
     
     /// <summary>
     /// Retrieves the item associated with the specified key.
@@ -144,6 +159,5 @@ namespace Hollow.Objects
     {
       return Database.items[key];
     }
-    
   }
 }

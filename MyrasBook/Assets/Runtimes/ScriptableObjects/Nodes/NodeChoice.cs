@@ -15,7 +15,7 @@ namespace Hollow.ScriptableObjects.Nodes
     [TextArea]
     public string text;
     
-    [BoxGroup("choice data"), LabelWidth(70), PropertySpace(6), LabelText("Conditions")]
+    [BoxGroup("choice data"), LabelWidth(70), PropertySpace(6), LabelText("choices")]
     public List<ChoiceStruct> list;
 
     public NodeChoice()
@@ -47,6 +47,9 @@ namespace Hollow.ScriptableObjects.Nodes
     [SerializeReference, InlineProperty, LabelText("Conditions")]
     [ListDrawerSettings(ShowIndexLabels = false, DraggableItems = true)] // Provide a handy list view for the Conditions
     public List<ConditionBase> conditions;
+    
+    
+    
   }
 
 }

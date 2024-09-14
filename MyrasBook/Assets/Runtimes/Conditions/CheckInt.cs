@@ -54,6 +54,9 @@ namespace Hollow.conditions
     /// <exception cref="ArgumentOutOfRangeException"></exception>
     public override bool IsFulfilled()
     {
+      #if UNITY_EDITOR
+      return true;
+      #endif
       var data = GameManager.Instance.Variables.Get(variable);
       if (data.type is not VariableType.Int)
       {

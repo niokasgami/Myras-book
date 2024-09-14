@@ -53,4 +53,13 @@ The addition of addressables to the pipeline also helped quickly in term of asse
 Although in this current iterations UI / gameplay features were halted in favor to create a strong fundation and the main focus is currently on the editor.
 ![Alt text](./screenshots/editor_sample.gif)
 
-After the editor will be finished and stable, the main goal will be 
+After the editor will be finished and stable, the main goal will be to implement the new UI system
+
+
+Update 2024-09-14
+
+in this update I have implemented the new system to be much more scallable and easier to access. (such as offering debug tools and built-in commands).
+![Alt test](./screenshots/01.png)
+
+I also started to implement the start of an Graph editor to help the overall flow of the game.
+![Alt test](./screenshots/layout.png)

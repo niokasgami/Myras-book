@@ -10,12 +10,14 @@ namespace Hollow.Actions
   {
     [BoxGroup("Item Settings")]
     [Tooltip("The ID of the item required for this condition")]
+    [LabelWidth(70)]
     public string itemId;
-
+    
     public GiveItem()
     {
       this.name = "GiveItem";
     }
+
 
     public override void OnAction()
 {

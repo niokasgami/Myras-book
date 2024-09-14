@@ -1,36 +1,33 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 namespace Hollow.ScriptableObjects
 {
   [CreateAssetMenu(menuName = "hollow/create new item", fileName = "new Item")]
-  public class ItemBase : ScriptableObject
+  public class ItemBase : ObjectBase
   {
     [PropertySpace(SpaceAfter =  7)]
-    [HorizontalGroup("Split",55,LabelWidth = 100)]
-    [HideLabel, PreviewField(55, ObjectFieldAlignment.Left)]
-    public Image image;
+    [HorizontalGroup("Split",70,LabelWidth = 100)]
+    [HideLabel, PreviewField(60, ObjectFieldAlignment.Left)]
+    public Sprite image;
     
-    [PropertySpace(SpaceAfter =  7)]
-    [VerticalGroup("Split/Meta")]
-    [InlineButton("OnNameChanged","rename")]
-    public string key;
-    
-
-    [VerticalGroup("Split/Meta")]
+    [BoxGroup("Metadata")]
+    [LabelWidth(100)]
     public string displayName;
     
 
-    [BoxGroup("Description")]
-    [HideLabel, TextArea(4, 14)]
+    [HorizontalGroup("Split")]
+    [HideLabel, TextArea(4, 14), LabelWidth(100)]
     public string description;
 
+    #if UNITY_EDITOR
     private void OnNameChanged()
     {
       var path = AssetDatabase.GetAssetPath(this);
       AssetDatabase.RenameAsset(path, key);
     }
+    #endif
   }
 }

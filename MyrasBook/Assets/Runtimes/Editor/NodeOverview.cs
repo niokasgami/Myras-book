@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Hollow.ScriptableObjects.Nodes;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 #if UNITY_EDITOR

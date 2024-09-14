@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Hollow.Objects
@@ -8,6 +8,7 @@ namespace Hollow.Objects
     public static Player Instance { get; private set; }
 
     private Inventory inventory;
+    private Bookmarks bookmarks;
     private void Awake()
     {
       if (Instance != null && Instance != this)
@@ -23,6 +24,7 @@ namespace Hollow.Objects
     private void Start()
     {
       inventory = new Inventory();
+      bookmarks = new Bookmarks();
     }
 
     public Inventory Inventory()
@@ -71,6 +73,31 @@ namespace Hollow.Objects
         }
       }
       return -1;
+    }
+    
+    public Bookmarks Bookmarks()
+    {
+      return bookmarks;
+    }
+
+    public string GetBookmark(int slot)
+    {
+      return bookmarks.Slot(slot);
+    }
+
+    public List<string> GetAllBookmarks()
+    {
+      return bookmarks.Slots();
+    }
+
+    public void WriteBookmark(string page,int slot)
+    {
+      bookmarks.Write(page,slot);
+    }
+
+    public void DestroyBookmark(int slot)
+    {
+      bookmarks.Destroy(slot);
     }
     
   }

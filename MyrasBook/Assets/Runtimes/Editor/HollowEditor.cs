@@ -1,5 +1,6 @@
 using System.Linq;
 using Hollow.ScriptableObjects;
+using Hollow.ScriptableObjects.Nodes;
 using Sirenix.OdinInspector.Demos.RPGEditor;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities;

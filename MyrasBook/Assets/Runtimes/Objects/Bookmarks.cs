@@ -28,6 +28,11 @@ namespace Hollow.Objects
       return slots[index];
     }
 
+    public List<string> Slots()
+    {
+      return slots;
+    }
+    
     /// <summary>
     /// Writes a page to a specified slot in the slot array.
     /// </summary>
@@ -86,6 +91,7 @@ namespace Hollow.Objects
       {
         slots.Add(null);
       }
+      // TODO : actually force a refresh of the bookmarks
     }
   }
 }

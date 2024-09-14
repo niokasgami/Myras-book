@@ -1,6 +1,5 @@
 ﻿using System;
 using Sirenix.OdinInspector;
-using UnityEngine;
 
 namespace Hollow.conditions
 {
@@ -11,6 +10,7 @@ namespace Hollow.conditions
     public string name;
     
     // 
+    
     public abstract bool IsFulfilled();
   }
 }
